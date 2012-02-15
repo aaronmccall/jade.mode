@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "syntax.dtd">
+<syntax>
+    <head>
+        <name>jade</name>
+
+        <autocompleteoptions use-spelling-dictionary="no" />
+
+        <charsintokens>
+            <![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#%.]]>
+        </charsintokens>
+<!--<charsincompletion><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@$</=>!]]></charsincompletion>-->
+    </head>
+
+    <states>
+        <default id="Base" color="#000" inverted-color="#fff">
+            
+            <keywords id="Keywords" color="#859900" inverted-color="#859900" casesensitive="yes" useforautocomplete="yes">
+                <regex>\b(data)\b</regex><regex>\b(html)\b</regex><regex>\b(head)\b</regex><regex>\b(title)\b</regex>
+                <regex>\b(base)\b</regex><regex>\b(link)\b</regex><regex>\b(meta)\b</regex><regex>\b(style)\b</regex>
+                <regex>\b(script)\b</regex><regex>\b(noscript)\b</regex><regex>\b(body)\b</regex><regex>\b(article)\b</regex>
+                <regex>\b(nav)\b</regex>
+                <regex>\b(aside)\b</regex>
+                <regex>\b(section)\b</regex>
+                <regex>\b(header)\b</regex>
+                <regex>\b(footer)\b</regex>
+                <regex>\b(h1)\b</regex>
+                <regex>\b(h2)\b</regex>
+                <regex>\b(h3)\b</regex>
+                <regex>\b(h4)\b</regex>
+                <regex>\b(h5)\b</regex>
+                <regex>\b(h6)\b</regex>
+                <regex>\b(hgroup)\b</regex>
+                <regex>\b(address)\b</regex>
+                <regex>\b(p)\b</regex>
+                <regex>\b(hr)\b</regex>
+                <regex>\b(pre)\b</regex>
+                <regex>\b(blockquote)\b</regex>
+                <regex>\b(ol)\b</regex>
+                <regex>\b(ul)\b</regex>
+                <regex>\b(li)\b</regex>
+                <regex>\b(dl)\b</regex>
+                <regex>\b(dt)\b</regex>
+                <regex>\b(dd)\b</regex>
+                <regex>\b(figure)\b</regex>
+                <regex>\b(figcaption)\b</regex>
+                <regex>\b(div)\b</regex>
+                <regex>\b(table)\b</regex>
+                <regex>\b(caption)\b</regex>
+                <regex>\b(thead)\b</regex>
+                <regex>\b(tbody)\b</regex>
+                <regex>\b(tfoot)\b</regex>
+                <regex>\b(tr)\b</regex>
+                <regex>\b(th)\b</regex>
+                <regex>\b(td)\b</regex>
+                <regex>\b(col)\b</regex>
+                <regex>\b(colgroup)\b</regex>
+                <regex>\b(form)\b</regex>
+                <regex>\b(fieldset)\b</regex>
+                <regex>\b(legend)\b</regex>
+                <regex>\b(label)\b</regex>
+                <regex>\b(input)\b</regex>
+                <regex>\b(button)\b</regex>
+                <regex>\b(select)\b</regex>
+                <regex>\b(datalist)\b</regex>
+                <regex>\b(optgroup)\b</regex>
+                <regex>\b(option)\b</regex>
+                <regex>\b(textarea)\b</regex>
+                <regex>\b(keygen)\b</regex>
+                <regex>\b(output)\b</regex>
+                <regex>\b(progress)\b</regex>
+                <regex>\b(meter)\b</regex>
+                <regex>\b(details)\b</regex>
+                <regex>\b(summary)\b</regex>
+                <regex>\b(command)\b</regex>
+                <regex>\b(menu)\b</regex>
+                <regex>\b(del)\b</regex>
+                <regex>\b(ins)\b</regex>
+                <regex>\b(img)\b</regex>
+                <regex>\b(iframe)\b</regex>
+                <regex>\b(embed)\b</regex>
+                <regex>\b(object)\b</regex>
+                <regex>\b(param)\b</regex>
+                <regex>\b(video)\b</regex>
+                <regex>\b(audio)\b</regex>
+                <regex>\b(source)\b</regex>
+                <regex>\b(canvas)\b</regex>
+                <regex>\b(track)\b</regex>
+                <regex>\b(map)\b</regex>
+                <regex>\b(area)\b</regex>
+                <regex>\b(a)\b</regex>
+                <regex>\b(em)\b</regex>
+                <regex>\b(strong)\b</regex>
+                <regex>\b(i)\b</regex>
+                <regex>\b(b)\b</regex>
+                <regex>\b(u)\b</regex>
+                <regex>\b(s)\b</regex>
+                <regex>\b(small)\b</regex>
+                <regex>\b(abbr)\b</regex>
+                <regex>\b(q)\b</regex>
+                <regex>\b(cite)\b</regex>
+                <regex>\b(dfn)\b</regex>
+                <regex>\b(sub)\b</regex>
+                <regex>\b(sup)\b</regex>
+                <regex>\b(time)\b</regex>
+                <regex>\b(code)\b</regex>
+                <regex>\b(kbd)\b</regex>
+                <regex>\b(samp)\b</regex>
+                <regex>\b(var)\b</regex>
+                <regex>\b(mark)\b</regex>
+                <regex>\b(bdi)\b</regex>
+                <regex>\b(bdo)\b</regex>
+                <regex>\b(ruby)\b</regex>
+                <regex>\b(rt)\b</regex>
+                <regex>\b(rp)\b</regex>
+                <regex>\b(span)\b</regex>
+                <regex>\b(br)\b</regex>
+                <regex>\b(wbr)\b</regex>
+            </keywords>
+
+
+
+            <!-- Red #FE1A1A -->
+            <state id="jade ID" color="#881280" inverted-color="#fac586"  font-style="normal" font-weight="normal" useforautocomplete="no">  
+            <!-- color="#d6771c" -->
+                <begin><regex>#(?=\w)</regex></begin>
+                <end><regex>[\w-]*(?=[^\w-]*)</regex></end>
+              <!-- <end><regex>\W{1}</regex></end> -->
+            </state>
+            <state id="jade Class" color="#881280" inverted-color="#fac586"  font-style="normal" font-weight="normal" useforautocomplete="no">  
+            <!-- color="#d6771c" -->
+                <begin><regex>\.(?=\w)</regex></begin>
+                <end><regex>[\w-]*(?=[^\w-]*)</regex></end>
+              <!-- <end><regex>\W{1}</regex></end> -->
+            </state>
+            
+            <state id="jade HTML Attributes" color="#586E75" inverted-color="#93A1A1">
+                <begin><regex>\(</regex></begin>
+                <end><regex>\)</regex></end>
+                
+                <state id="Strings in jade HTML Attributes" type="string" color="#2AA198" inverted-color="#2AA198" useforautocomplete="no">
+                    <begin><regex>"</regex></begin>
+                    <end><regex>"</regex></end>
+                </state>
+                
+                <!-- STUDIO support for single quote strings -->
+                <state id="Single Strings in jade HTML Attributes" type="string" color="#2AA198" inverted-color="#2AA198" useforautocomplete="no">
+                	<begin><regex>'</regex></begin>
+                    <end><regex>'</regex></end>
+                </state>
+                
+                <keywords id="Attributes in jade HTML Attributes" color="#586E75" inverted-color="#93A1A1" useforautocomplete="no">
+                    <regex>([\w-]*)(?=[ \t]*=)</regex>
+                </keywords>
+                
+            </state>
+
+
+            <state id="jade Comment Zero Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^(?:\/\/)</regex></begin>
+                <end><regex>[\r\n]</regex></end>
+            </state>
+
+            <state id="jade Comment Two Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{2}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,2}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Four Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{4}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,4}[\S])</regex></end>
+            </state>
+
+            
+            <state id="jade Comment Six Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{6}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,6}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Eight Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{8}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,8}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Ten Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{10}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,10}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Twelve Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{12}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,12}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Fourteen Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{14}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,14}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Sixteen Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{16}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,16}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Eighteen Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{18}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,18}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Twenty Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{20}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,20}[\S])</regex></end>
+            </state>
+            
+            <state id="jade Comment Twenty Two Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^[\ ]{22}(?:\/\/)(?=.*$)</regex></begin>
+                <end><regex>[\r\n](?=[\ ]{0,22}[\S])</regex></end>
+            </state>
+        
+            <import mode="HTML" />
+            
+        </default>
+    </states>
+</syntax>
