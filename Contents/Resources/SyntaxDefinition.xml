@@ -129,7 +129,13 @@
                 <regex>^\s*(wbr)\b</regex>
             </keywords>
             
-            <!-- Red #FE1A1A -->
+            <!-- jade Specific Keywords -->
+            <keywords id="jade Specific Keywords" color="#060" inverted-color="#CFC">
+                <regex>^\s*(case)\b</regex>
+                <regex>^\s*(when)\b</regex>
+                <regex>^\s*(each)\b</regex>            
+            </keywords>
+            
             <state id="jade ID" color="#881280" inverted-color="#fac586"  font-style="normal" font-weight="normal" useforautocomplete="no">  
             <!-- color="#d6771c" -->
                 <begin><regex>#(?=\w)</regex></begin>
@@ -159,18 +165,71 @@
                 </state>
                 
                 <keywords id="Attributes in jade HTML Attributes" color="#586E75" inverted-color="#93A1A1" useforautocomplete="no">
-                    <regex>([\w-]*)(?=[ \t]*=)</regex>
+                    <regex>(\w[\w-\:]*)(?=[ \t]*=)</regex>
                 </keywords>
                 
             </state>
+            
+            <state id="jade Embedded Javascript" color="#000" inverted-color="#FFF">
+                <begin><regex>\A\s*(?:-|=|!=)</regex></begin>
+                <end><regex>.$</regex></end>
 
+                <keywords id="JS Keywords" color="#881350" > 
+                    <regex>\b(if)\b</regex>
+                    <regex>\b(else)\b</regex>
+                    <regex>\b(for)\b</regex>
+                    <regex>\b(in)\b</regex>
+                    <regex>\b(while)\b</regex>
+                    <regex>\b(do)\b</regex>
+                    <regex>\b(continue)\b</regex>
+                    <regex>\b(break)\b</regex>
+                    <regex>\b(with)\b</regex>
+                    <regex>\b(try)\b</regex>
+                    <regex>\b(catch)\b</regex>
+                    <regex>\b(switch)\b</regex>
+                    <regex>\b(case)\b</regex>
+                    <regex>\b(new)\b</regex>
+                    <regex>\b(var)\b</regex>
+                    <regex>\b(function)\b</regex>
+                    <regex>\b(return)\b</regex>
+                    <regex>\b(this)\b</regex>
+                    <regex>\b(delete)\b</regex>
+                    <regex>\b(true)\b</regex>
+                    <regex>\b(false)\b</regex>
+                    <regex>\b(void)\b</regex>
+                    <regex>\b(throw)\b</regex>
+                    <regex>\b(typeof)\b</regex>
+                    <regex>\b(const)\b</regex>
+                    <regex>\b(default)\b</regex>
+                </keywords>
+                
+                <state-link mode="Javascript" state="AutodocComment" />
+                
+                <state-link mode="Javascript" state="Regular Expressions" />
+                
+                <state-link mode="Javascript" state="String" />
+                
+                <state-link mode="Javascript" state="SingleString" />
 
-            <state id="jade Comment Zero Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
-                <begin><regex>^(?:\/\/)</regex></begin>
+            </state>
+
+            <state id="jade Interpolate" color="#003" inverted-color="#CCF" >
+                <begin><regex>(?:#\{)</regex></begin>
+                <end><regex>\}(?&lt;!\\)</regex></end>
+            </state>
+
+            <state id="jade Interpolate Unescaped" color="#F00" inverted-color="#FCC" >
+                <begin><regex>(?:[\\]{0}\!\{)</regex></begin>
+                <end><regex>\}(?&lt;!\\)</regex></end>
+            </state>
+
+            <state id="jade Comment" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+                <begin><regex>^\s*(?:\/\/)</regex></begin>
                 <end><regex>[\r\n]</regex></end>
             </state>
 
-            <state id="jade Comment Two Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
+            <!--
+<state id="jade Comment Two Space" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
                 <begin><regex>^[\ ]{2}(?:\/\/)(?=.*$)</regex></begin>
                 <end><regex>[\r\n](?=[\ ]{0,2}[\S])</regex></end>
             </state>
@@ -225,6 +284,7 @@
                 <begin><regex>^[\ ]{22}(?:\/\/)(?=.*$)</regex></begin>
                 <end><regex>[\r\n](?=[\ ]{0,22}[\S])</regex></end>
             </state>
+-->
         
             <import mode="HTML" />
             
