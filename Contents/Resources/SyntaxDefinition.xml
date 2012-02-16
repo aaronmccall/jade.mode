@@ -131,9 +131,16 @@
             
             <!-- jade Specific Keywords -->
             <keywords id="jade Specific Keywords" color="#060" inverted-color="#CFC">
-                <regex>^\s*(case)\b</regex>
-                <regex>^\s*(when)\b</regex>
-                <regex>^\s*(each)\b</regex>            
+                <regex>^\s*(append)\b</regex>
+                <regex>^\s*(block)\b</regex>
+                <regex>^\s*(case)\b</regex> 
+                <regex>^\s*(each)\b</regex>  
+                <regex>^\s*(extends)\b</regex> 
+                <regex>^\s*(for)\b</regex>  
+                <regex>^\s*(if)\b</regex>   
+                <regex>^\s*(include)\b</regex>    
+                <regex>^\s*(mixin)\b</regex> 
+                <regex>^\s*(when)\b</regex>           
             </keywords>
             
             <state id="jade ID" color="#881280" inverted-color="#fac586"  font-style="normal" font-weight="normal" useforautocomplete="no">  
@@ -165,7 +172,7 @@
                 </state>
                 
                 <keywords id="Attributes in jade HTML Attributes" color="#586E75" inverted-color="#93A1A1" useforautocomplete="no">
-                    <regex>(\w[\w-\:]*)(?=[ \t]*=)</regex>
+                    <regex>([a-zA-Z]{1}[\w\-\:]*)(?=[ \t]*=)</regex>
                 </keywords>
                 
             </state>
@@ -225,6 +232,11 @@
 
             <state id="jade Comment" color="#236E25" font-style="italic" useforautocomplete="yes" type="comment">
                 <begin><regex>^\s*(?:\/\/)</regex></begin>
+                <end><regex>[\r\n]</regex></end>
+            </state>
+            
+            <state id="jade Doctype" color="#236E25" font-style="italic">
+                <begin><regex>\A(?:\!\!\!)</regex></begin>
                 <end><regex>[\r\n]</regex></end>
             </state>
 
