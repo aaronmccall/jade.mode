@@ -1,0 +1,19 @@
+!!!5
+html
+    head
+        meta(charset='utf-8')
+        title New Page
+    body
+        - if (locals.foo == 'george')
+        // A multi-line comment with more comment goodness
+
+        p an interpolate #{foo} and an unescaped interpolate !{bar} and an escaped escaped interpolate \#{baz}
+        p
+            a(
+              href='foo'
+              title='horse'
+            )
+        
+        - else
+        - var foo = 'bar'
+        =foo
