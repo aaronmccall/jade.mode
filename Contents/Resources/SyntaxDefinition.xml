@@ -212,6 +212,8 @@
                 
                 <state-link mode="Javascript" state="AutodocComment" />
                 
+                <state-link mode="Javascript" state="Comment" />
+                
                 <state-link mode="Javascript" state="Regular Expressions" />
                 
                 <state-link mode="Javascript" state="String" />
