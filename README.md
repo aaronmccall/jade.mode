@@ -2,6 +2,10 @@
 
 jade.mode is a jade syntax definition for SubEthaEdit & Coda. It is not complete, but it is useful. Please fork, make suggestions or otherwise help as you see fit.
 
+## Coda 2 support!
+
+@bluestrike2 (Tom Stoecklein) has created a Coda 2 version of the mode. It is available in the [coda2_master branch](https://github.com/aaronmccall/jade.mode/tree/coda2_master)
+
 ### Installation
 
 Simply check out this repo into either `~/Library/Application Support/Coda/Modes` or `~/Library/Application Support/SubEthaEdit/Modes`, be sure to name the directory `jade.mode`.
@@ -24,9 +28,10 @@ Simply check out this repo into either `~/Library/Application Support/Coda/Modes
 * Embedded JS blocks via script tag are currently not highlighted
 * Block expansion (eg, li.foo: a(href='bar')) is not supported only the first tag on the line is highlighted
 
-## Author
+## Authors
 
 Aaron McCall
+Tom Stoecklein (Coda 2 refactor)
 
 ## Credits
 
