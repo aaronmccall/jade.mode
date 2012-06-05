@@ -132,6 +132,11 @@
           <regex>[\r\n]</regex>
         </end>
       </state>
+      <keywords id="Entities" useforautocomplete="no" scope="markup.constant.entity.jade">
+				<regex>(&amp;#\d+;)</regex>
+				<regex>(&amp;#x\h+;)</regex>
+				<regex>(&amp;[\w\d\.\-]+;)</regex>
+			</keywords>
 	    <import mode="HTML" />
 	  </default>
 	</states>
