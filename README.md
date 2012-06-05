@@ -1,3 +1,5 @@
+# NOTE: This is the Coda 2 version of the mode. For Coda 1.x please refer to the [original version](https://github.com/aaronmccall/jade.mode).
+
 # jade.mode
 
 jade.mode is a jade syntax definition for Coda 2. It is not complete, but it is useful. Please fork, make suggestions or otherwise help as you see fit.
